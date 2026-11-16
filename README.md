@@ -313,6 +313,12 @@ python3 -m unittest discover -s tests  # the checker's test suite
 
 CI runs both on Python 3.8 and 3.14, plus an install and uninstall round trip.
 
+The README images are generated, not hand-made. If you change the checker's output, a skill
+name or the banner text, regenerate them with
+[`tools/make_readme_art.py`](tools/make_readme_art.py) (needs Pillow and the open
+[Cascadia Code](https://github.com/microsoft/cascadia-code) font). The checker image runs the
+real `xcheck.py`, so it always shows what the checker currently prints.
+
 ## License
 
 [MIT](LICENSE) © 2026 [Alok Kushwaha](https://github.com/Alok-Fusion)
