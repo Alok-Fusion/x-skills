@@ -1,0 +1,29 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.8", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Validate skills and manifests
+        run: python tools/validate.py
+      - name: Test the checker
+        run: python -m unittest discover -s tests -v
+      - name: Test the installer
+        run: |
+          HOME="$RUNNER_TEMP/home" bash install.sh
+          test -f "$RUNNER_TEMP/home/.agents/skills/x-post/SKILL.md"
+          test -f "$RUNNER_TEMP/home/.claude/skills/x-human/scripts/xcheck.py"
+          test -f "$RUNNER_TEMP/home/.x-skills/voice.md"
+          HOME="$RUNNER_TEMP/home" bash install.sh --uninstall
+          test ! -e "$RUNNER_TEMP/home/.agents/skills/x-post"

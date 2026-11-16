@@ -1,0 +1,13 @@
+{
+  "name": "x-skills",
+  "version": "1.0.0",
+  "description": "Grow on X (Twitter) without sounding like a bot: plan the day, write posts and threads that fit X's real 280-character count, draft replies to bigger accounts, handle your mentions, audit what worked, fix your profile. Nothing is ever posted without your yes.",
+  "author": {
+    "name": "Alok Kushwaha",
+    "url": "https://github.com/Alok-Fusion"
+  },
+  "homepage": "https://github.com/Alok-Fusion/x-skills",
+  "repository": "https://github.com/Alok-Fusion/x-skills",
+  "license": "MIT",
+  "keywords": ["x", "twitter", "social-media", "content", "writing", "build-in-public", "agent-skills"]
+}

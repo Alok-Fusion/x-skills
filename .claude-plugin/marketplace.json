@@ -1,0 +1,16 @@
+{
+  "name": "alok-fusion",
+  "description": "Agent skills by Alok Kushwaha",
+  "owner": {
+    "name": "Alok Kushwaha",
+    "url": "https://github.com/Alok-Fusion"
+  },
+  "plugins": [
+    {
+      "name": "x-skills",
+      "source": "./",
+      "description": "Grow on X (Twitter) without sounding like a bot: plan, write, reply, audit and check every post against X's real character count. Nothing posts without your yes.",
+      "version": "1.0.0"
+    }
+  ]
+}

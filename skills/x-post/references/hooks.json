@@ -1,0 +1,157 @@
+{
+  "version": "1.0",
+  "note": "18 hook formulas for X. On X the first line is usually the whole post: people read it in the feed and decide in about a second. Each formula has a template, a filled example (illustrative only, never reuse an example's facts or numbers as the user's), what it is for, and the way it usually gets ruined.",
+  "rules": [
+    "The first line must work alone. If it only makes sense after line 2, swap them.",
+    "One idea. Two ideas is a thread or two posts.",
+    "A number or a name beats an adjective.",
+    "If the hook still works with someone else's name on it, it isn't the user's hook.",
+    "No question in line 1 unless only this user could ask it."
+  ],
+  "hooks": [
+    {
+      "id": 1,
+      "name": "Hot Take",
+      "template": "{common belief in the niche} is wrong. {the one-line reason}.",
+      "example": "\"It works on my machine\" isn't done. It's the start of the bug report.",
+      "best_for": "TAKE posts. Highest reply rate, because people want to argue.",
+      "trap": "Being contrarian about something nobody believes, or picking a fight you won't defend in the replies."
+    },
+    {
+      "id": 2,
+      "name": "News + Take",
+      "template": "{what happened, in one line}. {what it actually means for the reader}.",
+      "example": "A lab just open-sourced a 1T-parameter model. Free to download, and you still can't run it at home.",
+      "best_for": "NEWS posts. The take is the post. The fact only earns the read.",
+      "trap": "A recap with no take. Recaps get ignored because 50 accounts post the same headline."
+    },
+    {
+      "id": 3,
+      "name": "Build Log",
+      "template": "Day {N} of building {thing}: {the one concrete thing that happened}.",
+      "example": "Day 12 of building a habit tracker: moved sync to WebSockets and the lag went away.",
+      "best_for": "BUILD posts. Gives followers a reason to come back tomorrow.",
+      "trap": "\"Made progress today\". With no concrete change there's no post."
+    },
+    {
+      "id": 4,
+      "name": "Bug Story",
+      "template": "{the symptom, stated flat}. {the absurd cause}.",
+      "example": "My game server died every 15 minutes. It wasn't a crash. The free tier was putting it to sleep.",
+      "best_for": "BUILD and TIP posts. Devs repost bugs they've had.",
+      "trap": "Burying the cause under setup. The cause is the punchline, so get there in two lines."
+    },
+    {
+      "id": 5,
+      "name": "Command Drop",
+      "template": "{problem in one line}. {the exact command or snippet}",
+      "example": "Find what's eating port 3000 on Windows:\n\nnetstat -ano | findstr :3000",
+      "best_for": "TIP posts. The most bookmarked format for dev audiences.",
+      "trap": "A command that doesn't work as written. Test it, or don't post it."
+    },
+    {
+      "id": 6,
+      "name": "TIL",
+      "template": "TIL {specific surprising fact}. {why it matters}.",
+      "example": "TIL Render injects PORT at runtime, so hardcoding 3000 works locally and fails silently in prod.",
+      "best_for": "TIP posts and lighter days.",
+      "trap": "A TIL everyone already knows. If it's in the first page of the docs, it isn't a TIL."
+    },
+    {
+      "id": 7,
+      "name": "Before / After",
+      "template": "Before: {state}. After: {state}. The change: {one thing}.",
+      "example": "Before: 4s to load the dashboard. After: 300ms. The change: stop re-rendering the whole table on every keystroke.",
+      "best_for": "BUILD posts with a real measurement.",
+      "trap": "Numbers that weren't measured. Never invent the before or the after."
+    },
+    {
+      "id": 8,
+      "name": "Specific Question",
+      "template": "{a question only someone doing the work would ask}",
+      "example": "For multiplayer games on free hosting: WebSockets or polling? What actually held up for you?",
+      "best_for": "QUESTION posts. Replies are the strongest signal on X.",
+      "trap": "\"What do you think about AI?\" A question anyone could ask gets answered by nobody."
+    },
+    {
+      "id": 9,
+      "name": "Poll",
+      "template": "{question}\n\n(native poll: 2-4 options, each under 25 chars)",
+      "example": "How much of your code does AI write now? 0-25% / 25-50% / 50-75% / 75%+",
+      "best_for": "QUESTION posts when the answer is a choice. Voting is a one-tap reply.",
+      "trap": "Options written as text lines instead of a native poll, or options that overlap."
+    },
+    {
+      "id": 10,
+      "name": "Mistake",
+      "template": "I {did the wrong thing} for {time}. {what it cost}.",
+      "example": "I kept user sessions in server memory for a month. Every redeploy logged everyone out.",
+      "best_for": "BUILD and TIP posts. Admitting a mistake earns more trust than a win does.",
+      "trap": "A humblebrag dressed as a mistake. The cost has to be real."
+    },
+    {
+      "id": 11,
+      "name": "Versus",
+      "template": "{A} vs {B} for {specific job}: {verdict in one line}.",
+      "example": "Flutter vs React Native for a 2-person team: Flutter, because one codebase actually stayed one codebase.",
+      "best_for": "TAKE and TIP posts. Comparisons pull replies from both camps.",
+      "trap": "No verdict. \"Both have pros and cons\" isn't a post."
+    },
+    {
+      "id": 12,
+      "name": "Prediction",
+      "template": "Calling it: {specific, checkable prediction} by {date}.",
+      "example": "Calling it: by the end of 2027, most PR reviews will start with an AI pass.",
+      "best_for": "NEWS and TAKE posts. People reply to agree, argue, or bookmark it to check later.",
+      "trap": "A prediction too vague to ever be wrong."
+    },
+    {
+      "id": 13,
+      "name": "Tiny List",
+      "template": "{N, 3 at most} {things} that {specific result}:\n\n- \n- \n- ",
+      "example": "3 things that broke when my game went online:\n\n- ports\n- sleeping servers\n- two players clicking at once",
+      "best_for": "TIP posts. Fits 280 when the items are short.",
+      "trap": "Seven items crammed into 280. Over 3 means it's a thread."
+    },
+    {
+      "id": 14,
+      "name": "Paste the Error",
+      "template": "{the real error line}\n\n{what it actually meant}.",
+      "example": "Error: listen EADDRINUSE :::3000\n\nTranslation: you already started it in another terminal. Again.",
+      "best_for": "TIP and joke posts. Devs recognise the error before they read the rest.",
+      "trap": "An error so obscure nobody has seen it."
+    },
+    {
+      "id": 15,
+      "name": "Screenshot Caption",
+      "template": "{one line that makes the image make sense} [image]",
+      "example": "The moment two users edit the same row in the same millisecond: [screenshot]",
+      "best_for": "BUILD posts. An image of your real UI or terminal stops the scroll.",
+      "trap": "A caption that describes the image. Say what the image can't."
+    },
+    {
+      "id": 16,
+      "name": "Observation",
+      "template": "{a true, specific thing everyone in the niche has noticed but not said}.",
+      "example": "Every side project has a README with a Roadmap section that has never been updated.",
+      "best_for": "FLEX posts. Short, funny if possible, and reposted for being relatable.",
+      "trap": "Being mean about a specific person or company."
+    },
+    {
+      "id": 17,
+      "name": "Milestone",
+      "template": "{honest small number} {thing}. {what changed because of it}.",
+      "example": "First 3 strangers used my CLI last night. One found a bug in 4 minutes.",
+      "best_for": "BUILD posts. Small honest numbers beat vague big claims.",
+      "trap": "Inflating the number, or a milestone with no story."
+    },
+    {
+      "id": 18,
+      "name": "Ask for Help",
+      "template": "{specific problem I'm stuck on}. {what I tried}. {the exact question}.",
+      "example": "My Render server sleeps after 15 min idle. Tried a GitHub Action ping. Is there a cleaner free option?",
+      "best_for": "QUESTION and BUILD posts. People love solving a concrete problem in public.",
+      "trap": "Not saying what you tried, so every reply suggests the obvious thing."
+    }
+  ]
+}

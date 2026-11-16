@@ -1,0 +1,102 @@
+{
+  "version": "1.0",
+  "note": "12-part rubric for an X profile, 100 points. The profile answers one question in about three seconds: is this account worth following? It's read from a reply or a repost, on a phone, so it's the name, bio, header and pinned post that decide.",
+  "items": [
+    {
+      "id": "name",
+      "label": "Display name",
+      "points": 6,
+      "limit": "50 characters",
+      "full_marks": "Real name, or name + one short descriptor people search for (e.g. 'Alok | building games in public'). Readable in a reply.",
+      "zero": "Handle repeated, emoji wall, or a name nobody could find."
+    },
+    {
+      "id": "handle",
+      "label": "Handle",
+      "points": 4,
+      "limit": "15 characters",
+      "full_marks": "Easy to say and type. Matches the name or the user's handle elsewhere (GitHub, LinkedIn).",
+      "zero": "Random digits that look like a bot. Note the cost of changing it (links and mentions break) before recommending a change."
+    },
+    {
+      "id": "photo",
+      "label": "Profile photo",
+      "points": 8,
+      "limit": "400x400, shown tiny",
+      "full_marks": "A clear face, tightly cropped, high contrast, recognisable at 40px in a reply.",
+      "zero": "Default egg/silhouette, a logo for a personal account, or a far-away photo."
+    },
+    {
+      "id": "header",
+      "label": "Header image",
+      "points": 7,
+      "limit": "1500x500, edges cropped on mobile",
+      "full_marks": "One line of what you build or do, plus proof or a handle, in the safe centre area. Or a real screenshot of the thing.",
+      "zero": "The default grey header."
+    },
+    {
+      "id": "bio_line1",
+      "label": "Bio: what you do",
+      "points": 14,
+      "limit": "first ~60 characters",
+      "full_marks": "Says what you build or do, and for whom, in plain words. Someone who reads only this knows why to follow.",
+      "zero": "'Passionate about tech', 'Learner', 'Dreamer', or a list of 6 roles."
+    },
+    {
+      "id": "bio_proof",
+      "label": "Bio: proof",
+      "points": 10,
+      "limit": "rest of the 160 characters",
+      "full_marks": "One concrete proof: a thing shipped, a result with a number, a place. Something checkable.",
+      "zero": "No proof, or claims with no anchor ('top developer', 'AI expert')."
+    },
+    {
+      "id": "bio_voice",
+      "label": "Bio: sounds like a person",
+      "points": 5,
+      "limit": "",
+      "full_marks": "Reads like the user talks. At most one emoji. No hashtag wall. 'Views my own' is optional, not a substitute.",
+      "zero": "A wall of hashtags, emoji separators between buzzwords, or third-person corporate copy."
+    },
+    {
+      "id": "link",
+      "label": "Website link",
+      "points": 7,
+      "limit": "one link",
+      "full_marks": "The one place to send a new follower: portfolio, GitHub, or the project. It works and loads fast on mobile.",
+      "zero": "Empty, broken, or a link-in-bio page with 15 dead links."
+    },
+    {
+      "id": "location",
+      "label": "Location",
+      "points": 3,
+      "limit": "30 characters",
+      "full_marks": "A real city or region (helps local recruiters and peers). A short joke is fine if the city is in the bio.",
+      "zero": "Empty when location matters to the user's goals (hiring, local events)."
+    },
+    {
+      "id": "pinned",
+      "label": "Pinned post",
+      "points": 16,
+      "limit": "",
+      "full_marks": "The best answer to 'why follow?': the best-performing post, or an intro thread (who, what I'm building, what I post). Recent enough to be true.",
+      "zero": "Nothing pinned, or a stale post about something the user no longer does."
+    },
+    {
+      "id": "recent_posts",
+      "label": "Last 10 posts",
+      "points": 12,
+      "limit": "",
+      "full_marks": "Match the bio's promise. Mostly the user's own posts and takes, posted regularly, with real replies.",
+      "zero": "Only reposts, only recaps, or nothing in weeks."
+    },
+    {
+      "id": "replies_tab",
+      "label": "Replies tab",
+      "points": 8,
+      "limit": "",
+      "full_marks": "Specific, useful replies to people in the niche. This is where curious people check whether you're real.",
+      "zero": "Empty, or 'Great post!' and emoji replies."
+    }
+  ]
+}
