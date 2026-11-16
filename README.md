@@ -167,20 +167,12 @@ that, try:
 
 ## How it works
 
-```mermaid
-flowchart LR
-    V[("voice.md<br/>your voice + routine")] --> P[x-plan]
-    A[x-audit] -. what worked .-> P
-    P --> W["x-post · x-thread"]
-    P --> R[x-reply]
-    W --> H{{"x-human<br/>checker"}}
-    R --> H
-    H --> G{"Your yes?"}
-    G -- edit --> W
-    G -- yes --> O["You post, or X's own<br/>scheduler if you allow it"]
-    O --> L[("log.md")]
-    L -.-> A
-```
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/flow-dark.png">
+    <img alt="voice.md feeds x-plan, which feeds x-post, x-thread and x-reply. Every draft goes through the x-human check, then waits for your yes. Approved posts go out and are written to log.md, which x-audit reads to improve the next plan." src=".github/assets/flow-light.png" width="100%">
+  </picture>
+</p>
 
 Every skill reads the same `voice.md`, so a plan, a post and a reply all sound like the same
 person. Everything that goes out is written to `log.md`, which keeps the next plan from
