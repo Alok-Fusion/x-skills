@@ -21,7 +21,8 @@
   <a href="#how-it-works"><b>How it works</b></a> ·
   <a href="#the-checker"><b>The checker</b></a> ·
   <a href="#guardrails"><b>Guardrails</b></a> ·
-  <a href="#faq"><b>FAQ</b></a>
+  <a href="#faq"><b>FAQ</b></a> ·
+  <a href="#contact"><b>Contact</b></a>
 </p>
 
 ---
@@ -318,6 +319,17 @@ name or the banner text, regenerate them with
 [`tools/make_readme_art.py`](tools/make_readme_art.py) (needs Pillow and the open
 [Cascadia Code](https://github.com/microsoft/cascadia-code) font). The checker image runs the
 real `xcheck.py`, so it always shows what the checker currently prints.
+
+## Contact
+
+Built by **Alok Kushwaha**, an NLP/ML and full-stack developer who builds in public.
+
+- **Email:** [kushwahaalok025@gmail.com](mailto:kushwahaalok025@gmail.com)
+- **X:** [@alokk983](https://x.com/alokk983)
+- **GitHub:** [@Alok-Fusion](https://github.com/Alok-Fusion)
+
+Open to full-time ML/NLP roles and collaborations. For bugs and ideas, please
+[open an issue](https://github.com/Alok-Fusion/x-skills/issues).
 
 ## License
 
